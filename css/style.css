@@ -89,7 +89,7 @@ pre {
 }
 
 .block > pre {
-    border: 1px solid grey;
+    border: 2px solid #ccc;
     padding: 0;
 }
 
