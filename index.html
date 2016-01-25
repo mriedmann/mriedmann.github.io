@@ -7,6 +7,8 @@
     <link rel="import" href="imports/array.html" id="import-array" />
     <link rel="import" href="imports/bitops.html" id="import-bitops" />
     <link rel="import" href="imports/glossar.html" id="import-glossar" />
+    <link rel="import" href="imports/types.html" id="import-types" />
+    <link rel="import" href="imports/printf.html" id="import-printf" />
     
     <script src="//code.jquery.com/jquery-2.2.0.min.js" type="application/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
@@ -35,17 +37,18 @@
     <page size="A4">
         <div class="page-border">
             <div class="container imported" id="array"></div>
-            <div class="container imported" id="bitops" style="width: 6cm"></div>
+            <div style="width: 6cm; float: left">
+                <div class="container imported" id="bitops"></div>
+                <div class="container imported" id="types"></div>
+                <div style="clear:both"></div>
+            </div>
             <div class="container imported" id="glossar" style="width: 13cm"></div>
+            <div>
+                <div class="container imported" id="printf"></div>
+            </div>
         </div>
     </page>
-    <page size="A4">
-        <p>Test</p>
-    </page>
     <page size="A4"></page>
     <page size="A4"></page>
-    <page size="A4"></page>
-    
-
 </body>
 </html>

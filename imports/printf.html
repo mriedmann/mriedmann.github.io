@@ -1,0 +1,191 @@
+<!DOCTYPE html><html class=''>
+<html>
+<head>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/code-vs.css" />
+    
+    <script src="//code.jquery.com/jquery-2.2.0.min.js" type="application/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <div class="container">
+        <div class="block" style="width:6cm" >
+            <h3>printf() Referenz</h3>
+            <table>
+                <tbody>
+                    <tr>
+                    <td><pre><code class="c transparent">%c</code></pre></td>
+                    <td>character</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">%d</code></pre></td>
+                    <td>decimal (integer) number (base 10)</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">%e</code></pre></td>
+                    <td>exponential floating-point number</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">%f</code></pre></td>
+                    <td>floating-point number</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">%i</code></pre></td>
+                    <td>integer (base 10)</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">%o</code></pre></td>
+                    <td>octal number (base 8)</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">%s</code></pre></td>
+                    <td>a string of characters</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">%u</code></pre></td>
+                    <td>unsigned decimal (integer) number</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">%x</code></pre></td>
+                    <td>number in hexadecimal (base 16)</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">%%</code></pre></td>
+                    <td>print a percent sign</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">\%</code></pre></td>
+                    <td>print a percent sign</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="block" style="width:6cm">
+            <h3>special printf characters</h3>
+            <table>
+                <tbody>
+                    <tr>
+                    <td><pre><code class="c transparent">\a</code></pre></td>
+                    <td>audible alert</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">\b</code></pre></td>
+                    <td>backspace</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">\f</code></pre></td>
+                    <td>form feed</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">\n</code></pre></td>
+                    <td>newline, or linefeed</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">\r</code></pre></td>
+                    <td>carriage return</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">\t</code></pre></td>
+                    <td>tab</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">\v</code></pre></td>
+                    <td>vertical tab</td>
+                    </tr>
+                    <tr>
+                    <td><pre><code class="c transparent">\\</code></pre></td>
+                    <td>backslash</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block" style="width:7.5cm">
+            <h3>printf integer formatting</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Description</th>
+                        <th>Code</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td>At least five wide</td>
+                        <td><pre><code class="c transparent">printf("'%5d'", 10);</code></pre></td>
+                        <td><pre><code class="c transparent">'&nbsp;&nbsp;&nbsp;10'</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td>At least five-wide, left-justified</td>
+                        <td><pre><code class="c transparent">printf("'%-5d'", 10);</code></pre></td>
+                        <td><pre><code class="c transparent">'10&nbsp;&nbsp;&nbsp;'</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td>At least five-wide, zero-filled</td>
+                        <td><pre><code class="c transparent">printf("'%05d'", 10);</code></pre></td>
+                        <td><pre><code class="c transparent">'00010'</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td>At least five-wide, with a plus sign</td>
+                        <td><pre><code class="c transparent">printf("'%+5d'", 10);</code></pre></td>
+                        <td><pre><code class="c transparent">'&nbsp;&nbsp;+10'</code></pre></td>
+                    </tr>
+                    <tr>
+                        <td>Five-wide, plus sign, left-justified</td>
+                        <td><pre><code class="c transparent">printf("'%-+5d'", 10);</code></pre></td>
+                        <td><pre><code class="c transparent">'+10&nbsp;&nbsp;'</code></pre></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="block" style="width:12cm">
+            <h3>printf floating point numbers</h3>
+            <table>
+            <tbody>
+            <tr>
+            <th>Description</th>
+            <th>Code</th>
+            <th>Result</th>
+            </tr>
+            <tr>
+            <td>Print one position after the decimal</td>
+            <td><pre><code class="c transparent">printf("'%.1f'", 10.3456);</code></pre></td>
+            <td><pre><code class="c transparent">'10.3'</code></pre></td>
+            </tr>
+            <tr>
+            <td>Two positions after the decimal</td>
+            <td><pre><code class="c transparent">printf("'%.2f'", 10.3456);</code></pre></td>
+            <td><pre><code class="c transparent">'10.35'</code></pre></td>
+            </tr>
+            <tr>
+            <td>Eight-wide, two positions after the decimal</td>
+            <td><pre><code class="c transparent">printf("'%8.2f'", 10.3456);</code></pre></td>
+            <td><pre><code class="c transparent">'&nbsp;&nbsp;&nbsp;10.35'</code></pre></td>
+            </tr>
+            <tr>
+            <td>Eight-wide, four positions after the decimal</td>
+            <td><pre><code class="c transparent">printf("'%8.4f'", 10.3456);</code></pre></td>
+            <td><pre><code class="c transparent">'&nbsp;10.3456'</code></pre></td>
+            </tr>
+            <tr>
+            <td>Eight-wide, two positions after the decimal, zero-filled</td>
+            <td><pre><code class="c transparent">printf("'%08.2f'", 10.3456);</code></pre></td>
+            <td><pre><code class="c transparent">'00010.35'</code></pre></td>
+            </tr>
+            <tr>
+            <td>Eight-wide, two positions after the decimal, left-justified</td>
+            <td><pre><code class="c transparent">printf("'%-8.2f'", 10.3456);</code></pre></td>
+            <td><pre><code class="c transparent">'10.35&nbsp;&nbsp;&nbsp;'</code></pre></td>
+            </tr>
+            <tr>
+            <td>Printing a much larger number with that same format</td>
+            <td><pre><code class="c transparent">printf("'%-8.2f'", 101234567.3456);</code></pre></td>
+            <td><pre><code class="c transparent">'101234567.35'</code></pre></td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
