@@ -1,0 +1,156 @@
+body {
+    background: rgb(204,204,204); 
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+page[size="A4"] {
+    background: white;
+    width: 21cm;
+    height: 29.7cm;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+
+@media print {
+    body, page[size="A4"] {
+        margin: 0;
+        box-shadow: 0;
+    }
+}
+
+.page-border {
+    padding: 0.5cm;
+}
+
+.container {
+    float:left;
+    padding: 3px;
+}
+.container:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+/* TEXT */
+h1 {
+	font-family: 'Lucida Bright', Georgia, serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 16px;
+}
+h3 {
+	font-family: 'Lucida Bright', Georgia, serif;
+	font-size: 10px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 14px;
+}
+p {
+	font-family: 'Lucida Bright', Georgia, serif;
+	font-size: 8px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 14px;
+}
+blockquote {
+	font-family: 'Lucida Bright', Georgia, serif;
+	font-size: 8px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 10px;
+}
+pre {
+	font-family: 'Lucida Bright', Georgia, serif;
+	font-size: 8px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 300;
+	line-height: 8px;
+}
+
+.block {
+    float: left;
+    padding: 2px;
+}
+
+.nofloat {
+    float: none !important;
+}
+
+.block > pre {
+    border: 1px solid grey;
+    padding: 0;
+}
+
+.block > h3 {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.block > pre, 
+.block > p 
+{
+    line-height: 10px;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+table { 
+    font-size: 10px;
+    width: 100%; 
+    border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+    background: #eee; 
+}
+th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+}
+td, th { 
+    padding: 2px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+}
+
+ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+dl {
+    margin-top: 0;
+    padding: 0;
+}
+dt {
+    font-weight: bold;
+    color: green;
+}
+dt:after {
+    content: ":";
+}
+dd {
+    margin: 0;
+    padding: 0 0 0.5em 10px;
+}
+
+dd:nth-of-type(odd) { 
+    background: #eee; 
+}
+dt:nth-of-type(odd) { 
+    background: #eee; 
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html><html class=''>
+<html>
+<head>
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/code-vs.css" />
+    
+    <link rel="import" href="imports/array.html" id="import-array" />
+    <link rel="import" href="imports/bitops.html" id="import-bitops" />
+    <link rel="import" href="imports/glossar.html" id="import-glossar" />
+    
+    <script src="//code.jquery.com/jquery-2.2.0.min.js" type="application/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <script>
+        $(function(){
+            $(".imported").each(function(i, e){
+                var target = $(e);
+                var name = target.attr("id");
+                var imp = document.getElementById('import-' + name).import;
+                var html = imp.body.innerHTML;
+                var source = $(html);
+                
+                var style = "";
+                style += target.attr('style') ? target.attr('style') : "";
+                style += source.attr('style') ? " " + source.attr('style') : "";
+                
+                source.attr('style', style);
+                target.replaceWith(source);
+            });
+        });
+    </script>
+</head>
+<body>
+    <page size="A4">
+        <div class="page-border">
+            <div class="container imported" id="array"></div>
+            <div class="container imported" id="bitops" style="width: 6cm"></div>
+            <div class="container imported" id="glossar" style="width: 13cm"></div>
+        </div>
+    </page>
+    <page size="A4">
+        <p>Test</p>
+    </page>
+    <page size="A4"></page>
+    <page size="A4"></page>
+    <page size="A4"></page>
+    
+
+</body>
+</html>

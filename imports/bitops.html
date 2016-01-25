@@ -1,0 +1,98 @@
+<!DOCTYPE html><html class=''>
+<html>
+<head>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/code-vs.css" />
+    
+    <script src="//code.jquery.com/jquery-2.2.0.min.js" type="application/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <div class="container">
+        <div class="block nofloat" style="width: 6.0cm">
+            <h3>Bitweise (bitwise) Operatoren </h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Aufgabe</th>
+                        <th>Beispiel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&amp;</td>
+                        <td>bitwise AND</td>
+                        <td>x = a &amp; b</td>
+                    </tr>
+                    <tr>
+                        <td>|</td>
+                        <td>bitwise OR</td>
+                        <td>x = a | b</td>
+                    </tr>
+                    <tr>
+                        <td>&circ;</td>
+                        <td>bitwise XOR</td>
+                        <td>x = a &circ; b</td>
+                    </tr>
+                    <tr>
+                        <td>&tilde;</td>
+                        <td>complement (NOT)</td>
+                        <td>x = &tilde;a</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;&gt;</td>
+                        <td>shift right</td>
+                        <td>x = a &gt;&gt; b</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;&lt;</td>
+                        <td>shift left</td>
+                        <td>x = a &lt;&lt; b</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <div class="block" style="width: 6.0cm">
+            <h3>bitwise-Op Beispiel </h3>
+            <pre><code class="c">/* Studienbrief04 - bit_operation*/
+#include &lt;stdio.h&gt;
+int main(int argc, char* argv[])
+{
+ unsigned char a = 45; /* 00101101 - 1 Byte */
+ unsigned char b = 170; /* 10101010 - 1 Byte */
+ unsigned char result = 0;
+ /* bitwise AND */
+ result = a &amp; b;
+ printf("%d\n", (int)result);
+ /* 40 - binary 00101000 */
+ /* bitwise OR */
+ result = a | b;
+ printf("%d\n", (int)result);
+ /* 175 - binary 10101111 */
+ /* bitwise XOR */
+ result = a ^ b;
+ printf("%d\n", (int)result);
+ /* 135 - binary 10000111 */
+ /* complement */
+ result = ~a;
+ printf("%d\n", (int)result);
+ /* 210 - binary 11010010 */
+ /* bitwise shift right */
+ result = a;
+ result >>= 3;
+ printf("%d\n", (int)result);
+ /* 5 - binary 00000101 */
+ /* bitwise shift left */
+ result = a;
+ result &lt;&lt;= 3;
+ printf("%d\n", (int)result);
+ /* 104 - binary 01101000 */
+ return 0;
+}</code></pre>
+        </div>
+    </div>
+</body>
+</html>

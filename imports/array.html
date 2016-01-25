@@ -1,0 +1,46 @@
+<!DOCTYPE html><html class=''>
+<html>
+<head>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/code-vs.css" />
+    
+    <script src="//code.jquery.com/jquery-2.2.0.min.js" type="application/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <div class="container">
+        <div class="block" style="width: 10.5cm">
+            <h3>Deklaration und Definition einer Arrays</h3>
+            <pre><code class="c">#define ANZAHL_ELEMENTE Anzahl_Elemente /* Definition der symbolischen Konstanten */
+/* Wertebereich des Index ist immer von [0, (Anzahl_Elemente-1)] */
+typ arrayname[ANZAHL_ELEMENTE];
+typ i;
+/* Mit const wird verhindert, dass die Werte eines Feldes verändert werden können
+Die Feldgröße wird hier durch den Compiler selbst berechnet (Anzahl der Elemente bei der
+Initialisierung) */
+const typ arrayname_const[] = {z1, z..., zn};
+/* greift auf das Element mit dem Index x zu und weist den Wert der Variablen
+i zu */
+i = arrayname[x];
+/* Beachten Sie, dass Sie niemals einen Zugriff außerhalb des Wertebereichs durchführen.
+d.h. x muss immer im Wertebereich [0, ANZAHL_ELEMENTE-1] sein! */</code></pre>
+        <p>Die Deklaration erfolgt durch die Typangabe der Arraybezeichnung und die ANZAHL_ELEMENTE.
+ANZAHL_ELEMENTE wird mithilfe von einer symbolischen Konstante festgelegt.</p>
+        </div>
+    
+        <div class="block" style="width: 8.5cm">
+                <h3>Initialisierung</h3>
+                <pre><code class="c">/* Das Array wird vereinbart. Vom Indexbereich [0, m] werden die 
+Werte x1 ... xm zugewiesen und von Index m+1 ... Anzahl_Elemente-1 
+wird der Wert 0 zugewiesen. */
+typ arrayname_init[ANZAHL_ELEMENTE] = {x1, ... , xm};</code></pre>
+                <p>Enthält die Initialisierungsliste (gilt also nur bei der Initialisierung der Form
+typ arrayname[n] = {..., ..., ...};) weniger Elemente als die Dimension des definierten
+Arrays so werden die Datenelemente von 0 bis (n - 1) mit den angegebenen Werten initialisiert. Die
+restlichen Elemente werden mit dem Wert 0 initialisiert.
+Globale und statische Felder werden automatisch mit 0 initialisiert. </p>
+        </div>
+    </div>
+</body>
+</html>
