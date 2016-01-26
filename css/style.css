@@ -1,3 +1,7 @@
+* { 
+    box-sizing: border-box;
+}
+
 body {
     background: rgb(204,204,204); 
     font-family: sans-serif;
@@ -23,12 +27,18 @@ page[size="A4"] {
 }
 
 .page-border {
-    padding: 0.5cm;
+    padding: 10.5mm;
+}
+
+.page-border:after {
+  content:"";
+  display:table;
+  clear:both;
 }
 
 .container {
     float:left;
-    padding: 3px;
+    padding: 0;
 }
 .container:after {
   content:"";
@@ -37,6 +47,10 @@ page[size="A4"] {
 }
 
 /* TEXT */
+h1, h2, h3 {
+    margin: 0;
+}
+
 h1 {
 	font-size: 16px;
 	font-style: normal;
@@ -79,9 +93,12 @@ pre {
 }
 
 .block {
-    float: left;
     padding: 2px;
-    width: 100%;
+}
+
+.pull-left
+{
+    float: left;
 }
 
 .nofloat {
@@ -154,4 +171,70 @@ dd:nth-of-type(odd) {
 }
 dt:nth-of-type(odd) { 
     background: #eee; 
+}
+
+.hidden {
+    display: none;
+}
+
+.col0  { width: 0mm; }
+.col1  { width: 10.5mm; }
+.col2  { width: 21mm; }
+.col3  { width: 31.5mm; }
+.col4  { width: 42mm; }
+.col5  { width: 52.5mm; }
+.col6  { width: 63mm; }
+.col7  { width: 73.5mm; }
+.col8  { width: 84mm; }
+.col9  { width: 94.5mm; }
+.col10 { width: 105mm; }
+.col11 { width: 115.5mm; }
+.col12 { width: 126mm; }
+.col13 { width: 136.5mm; }
+.col14 { width: 147mm; }
+.col15 { width: 157.5mm; }
+.col16 { width: 168mm; }
+.col17 { width: 178.5mm; }
+.col18 { width: 189mm; }
+.col19 { width: 199.5mm; }
+.col20 { width: 210mm; }
+
+
+.row0  { height: 0mm; }
+.row1  { height: 13.5mm; }
+.row2  { height: 27mm; }
+.row3  { height: 40.5mm; }
+.row4  { height: 54mm; }
+.row5  { height: 67.5mm; }
+.row6  { height: 81mm; }
+.row7  { height: 94.5mm; }
+.row8  { height: 108mm; }
+.row9  { height: 121.5mm; }
+.row10 { height: 135mm; }
+.row11 { height: 148.5mm; }
+.row12 { height: 162mm; }
+.row13 { height: 175.5mm; }
+.row14 { height: 189mm; }
+.row15 { height: 202.5mm; }
+.row16 { height: 216mm; }
+.row17 { height: 229.5mm; }
+.row18 { height: 243mm; }
+.row19 { height: 256.5mm; }
+.row20 { height: 270mm; }
+.row21 { height: 283.5mm; }
+.row22 { height: 297mm; }
+
+
+
+.content {
+    display: block;
+}
+
+.content:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+.pull-right {
+    float: right;
 }

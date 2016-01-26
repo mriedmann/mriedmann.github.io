@@ -9,12 +9,14 @@
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-    <div class="container">
-        <div class="block" style="width: 10.5cm">
-            <h3></h3>
-            <pre><code class="c"></code></pre>
-            <p></p>
-        </div>
+    <div class="block col9 pull-left">
+        <pre><code class="c">/* List */
+struct ListElement
+{
+struct ListElement *next; /* Zeiger auf den nächsten Knoten */
+int info; /* Informationsteil */
+};
+struct ListElement *liste = NULL; /* Zeiger auf den Anfang der Liste */</code></pre>
     </div>
 </body>
 </html>

@@ -9,6 +9,12 @@
     <link rel="import" href="imports/glossar.html" id="import-glossar" />
     <link rel="import" href="imports/types.html" id="import-types" />
     <link rel="import" href="imports/printf.html" id="import-printf" />
+    <link rel="import" href="imports/printf2.html" id="import-printf2" />
+    <link rel="import" href="imports/btree.html" id="import-btree" />
+    <link rel="import" href="imports/quickref.html" id="import-quickref" />
+    <link rel="import" href="imports/list.html" id="import-list" />
+    <link rel="import" href="imports/ops.html" id="import-ops" />
+    <link rel="import" href="imports/recursion.html" id="import-rec" />
     
     <script src="//code.jquery.com/jquery-2.2.0.min.js" type="application/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
@@ -22,12 +28,6 @@
                 var imp = document.getElementById('import-' + name).import;
                 var html = imp.body.innerHTML;
                 var source = $(html);
-                
-                var style = "";
-                style += target.attr('style') ? target.attr('style') : "";
-                style += source.attr('style') ? " " + source.attr('style') : "";
-                
-                source.attr('style', style);
                 target.replaceWith(source);
             });
         });
@@ -36,18 +36,31 @@
 <body>
     <page size="A4">
         <div class="page-border">
-            <div class="container imported" id="array"></div>
-            <div style="width: 6cm; float: left">
+            <div class="col4 pull-right">
                 <div class="container imported" id="bitops"></div>
-                <div class="container imported" id="types"></div>
+                <div class="container imported" id="printf"></div>
                 <div style="clear:both"></div>
             </div>
-            <div class="container imported" id="glossar" style="width: 13cm"></div>
-            <div>
-                <div class="container imported" id="printf"></div>
+            <div class="container col14">
+                <div class="container imported" id="quickref"></div>
+                <div class="container imported" id="glossar"></div>
             </div>
+            <div class="container col18">
+                <div class="imported" id="types"></div>
+                <div class="imported" id="printf2"></div>
+            </div>
+            <div class="container col18">
+                <div class="container imported" id="btree"></div>
+                <div class="container imported" id="list"></div>
+            </div>
+            
         </div>
     </page>
-    <page size="A4"></page>
+    <page size="A4">
+        <div class="page-border">
+            <div class="container imported" id="ops"></div>
+            <div class="container imported" id="rec"></div>
+        </div>
+    </page>
 </body>
 </html>

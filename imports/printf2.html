@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/code-vs.css" />
+    
+    <script src="//code.jquery.com/jquery-2.2.0.min.js" type="application/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <div class="block pull-left">
+        <h3>printf floating point numbers</h3>
+        <table>
+        <tbody>
+        <tr>
+        <th>Code</th>
+        <th>Result</th>
+        </tr>
+        <tr>
+        <td><pre><code class="c transparent">printf("'%.1f'", 10.3456);</code></pre></td>
+        <td><pre><code class="c transparent">'10.3'</code></pre></td>
+        </tr>
+        <tr>
+        <td><pre><code class="c transparent">printf("'%.2f'", 10.3456);</code></pre></td>
+        <td><pre><code class="c transparent">'10.35'</code></pre></td>
+        </tr>
+        <tr>
+        <td><pre><code class="c transparent">printf("'%8.2f'", 10.3456);</code></pre></td>
+        <td><pre><code class="c transparent">'&nbsp;&nbsp;&nbsp;10.35'</code></pre></td>
+        </tr>
+        <tr>
+        <td><pre><code class="c transparent">printf("'%8.4f'", 10.3456);</code></pre></td>
+        <td><pre><code class="c transparent">'&nbsp;10.3456'</code></pre></td>
+        </tr>
+        <tr>
+        <td><pre><code class="c transparent">printf("'%08.2f'", 10.3456);</code></pre></td>
+        <td><pre><code class="c transparent">'00010.35'</code></pre></td>
+        </tr>
+        <tr>
+        <td><pre><code class="c transparent">printf("'%-8.2f'", 10.3456);</code></pre></td>
+        <td><pre><code class="c transparent">'10.35&nbsp;&nbsp;&nbsp;'</code></pre></td>
+        </tr>
+        <tr>
+        <td><pre><code class="c transparent">printf("'%-8.2f'", 101234567.3456);</code></pre></td>
+        <td><pre><code class="c transparent">'101234567.35'</code></pre></td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="block pull-left">
+        <h3>printf integer formatting</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Code</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td><pre><code class="c transparent">printf("'%5d'", 10);</code></pre></td>
+                    <td><pre><code class="c transparent">'&nbsp;&nbsp;&nbsp;10'</code></pre></td>
+                </tr>
+                <tr>
+                    <td><pre><code class="c transparent">printf("'%-5d'", 10);</code></pre></td>
+                    <td><pre><code class="c transparent">'10&nbsp;&nbsp;&nbsp;'</code></pre></td>
+                </tr>
+                <tr>
+                    <td><pre><code class="c transparent">printf("'%05d'", 10);</code></pre></td>
+                    <td><pre><code class="c transparent">'00010'</code></pre></td>
+                </tr>
+                <tr>
+                    <td><pre><code class="c transparent">printf("'%+5d'", 10);</code></pre></td>
+                    <td><pre><code class="c transparent">'&nbsp;&nbsp;+10'</code></pre></td>
+                </tr>
+                <tr>
+                    <td><pre><code class="c transparent">printf("'%-+5d'", 10);</code></pre></td>
+                    <td><pre><code class="c transparent">'+10&nbsp;&nbsp;'</code></pre></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

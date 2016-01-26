@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/code-vs.css" />
+    
+    <script src="//code.jquery.com/jquery-2.2.0.min.js" type="application/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <div class="col14">
+        <h3>QuickRef</h3>
+    </div>
+    <div class="block col3 pull-left">
+        <pre><code class="c">/* Std. C Library */
+#include &lt;stdio.h&gt; 
+#include &lt;string.h&gt; 
+#include &lt;stdlib.h&gt; 
+#include &lt;math.h&gt; 
+#include &lt;limits.h&gt; 
+#include &lt;malloc.h&gt;
+
+/* Struct */
+struct tag {
+  type member1;
+  type member2;
+} variable;</code></pre>
+    </div>
+    <div class="block col11 pull-left">
+        <pre><code class="c">/* Functions */
+int main(int argc, char *argv[]) { ... }                          //main with args
+int functionname(type1 input1, ... , typeN *output1, ...);        //Prototype
+int functionname(type1 input1, ... , typeN *output1, ...) { ... } //Implementation
+/* Marcro */
+#define max(A,B) ((A)>(B) ? (A) : (B))</code></pre>
+    </div>
+    <div class="block col4 pull-left">
+        <pre><code class="c">/* Array */
+double jahrestemperatur[12][31];
+/* Enum */
+enum tag {name1=value1,. . . };</code></pre>
+    </div>
+    <div class="block col7 pull-left">
+        <pre><code class="c">/* Pointer */
+int i; int *adresse; int wert;
+i = 5;
+addresse = &i;       //Adressoperator
+wert = *adresse;     //Dereferenzierungsop.
+printf("%d\n",wert); //5 = der Wert von i</code></pre>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/code-vs.css" />
+    
+    <script src="//code.jquery.com/jquery-2.2.0.min.js" type="application/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <div class="block col6 pull-left">
+        <table>
+            <thead>
+                <tr>
+                    <th>Rang</th>
+                    <th>Operatoren</th>
+                    <th><sup>1)</sup></th>
+                </tr>
+            </thead>       
+            <tbody>
+                <tr><td>1</td><td><pre><code class="c transparent">() [ ] -&gt; .</code></pre></td><td>=&gt;</td></tr>
+                <tr><td>2</td><td><pre><code class="c transparent">! ~ + - ++ -- &amp; * (typecast) sizeof</code></pre></td><td>&lt;=</td></tr>
+                <tr><td>3</td><td><pre><code class="c transparent">* / %</code></pre></td><td>=&gt;</td></tr>
+                <tr><td>4</td><td><pre><code class="c transparent">+ - </code></pre></td><td>=&gt;</td></tr>
+                <tr><td>5</td><td><pre><code class="c transparent">&lt;&lt; &gt;&gt; </code></pre></td><td>=&gt;</td></tr>
+                <tr><td>6</td><td><pre><code class="c transparent">&lt; &lt;= &gt; &gt;= </code></pre></td><td>=&gt;</td></tr>
+                <tr><td>7</td><td><pre><code class="c transparent">== != </code></pre></td><td>=&gt;</td></tr>
+                <tr><td>8</td><td><pre><code class="c transparent">&amp; </code></pre></td><td>=&gt;</td></tr>
+                <tr><td>9</td><td><pre><code class="c transparent">^ </code></pre></td><td>=&gt;</td></tr>
+                <tr><td>10</td><td><pre><code class="c transparent">| </code></pre></td><td>=&gt;</td></tr>
+                <tr><td>11</td><td><pre><code class="c transparent">&amp;&amp; </code></pre></td><td>=&gt;</td></tr>
+                <tr><td>12</td><td><pre><code class="c transparent">|| </code></pre></td><td>=&gt;</td></tr>
+                <tr><td>13</td><td><pre><code class="c transparent">? : </code></pre></td><td>&lt;=</td></tr>
+                <tr><td>14</td><td><pre><code class="c transparent">= *= /= %= += -= &amp;= ^= |= &lt;&lt;= &gt;&gt;= </code></pre></td><td>&lt;=</td></tr>
+                <tr><td>15</td><td><pre><code class="c transparent">, </code></pre></td><td>=&gt;</td></tr>
+            </tbody>
+        </table>
+        <dl>
+            <dt><sup>1)</sup>Assoziativität</dt>
+            <dd>"=&gt;" bedeutet: Ausführung erst des linken Operators, dann des rechten Operators a OP1 b OP2 c -> OP1 dann OP2 (1 + 2 - 3 &lt;=&gt; (1 + 2) - 3)<br/>"&lt;=" bedeutet: Ausführung erst des rechten Operators, dann des linken Operators a OP1 b OP2 c -> OP2 dann OP1 (!-a &lt;=&gt; !(-a))</dd>
+        </dl>
+    </div>
+    <div class="block col6 pull-left">
+        <pre><code class="c">x = 100
+x++        //x = 100 + 1; x = 101
+x += 2     //x = 100 + 2; x = 102
+x -= 2     //x = 100 - 2; x = 98
+x *= x - 1 //x = 100 * (100 - 1); x = 9900
+x *= x--   //x = (100 * 100) - 1; x = 9999
+x += x++   //x = (100 + 100) + 1; x = 201
+x *= --x   //x = (100 - 1) * (100 - 1); x = 9801
+x += ++x   //x = (100 + 1) + (100 + 1); x = 202</code></pre>
+    </div>
+</body>
+</html>

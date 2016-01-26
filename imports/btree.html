@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/code-vs.css" />
+    
+    <script src="//code.jquery.com/jquery-2.2.0.min.js" type="application/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+    <div class="col9">
+        <h3>Binary Tree</h3>
+    
+    <div class="col5 pull-left">
+        <div class="block">
+            <img src="/img/btree_order.PNG" style="width:100%" />
+        </div>
+        <div class="block">
+            <img src="/img/btree.PNG" style="width:100%" />
+        </div>
+    </div>
+    <div class="block col4 pull-left">
+            <pre><code class="c">/* Tree */
+typedef struct TNode
+{
+    int data;
+    struct TNode *pleft;
+    struct TNode *pright;
+} TNode;
+
+/* Minimum */
+TNode *p = *tree;
+if (!p) return NULL; 
+if (p-&gt;pleft)
+    return minimum(&amp;(p-&gt;pleft));
+*tree = p-&gt;pright;
+return p;
+</code></pre>
+    </div>
+    </div>
+</body>
+</html>
